@@ -3,54 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Meghwal | Official</title>
+    <title>Deepak Meghwal | Graphic & Data Expert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --orange: #f37021; --blue: #1b2d53; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding-top: 50px; background: #f9f9f9; }
+        :root { 
+            --orange: #f37021; 
+            --blue: #1b2d53; 
+            --light-bg: #f8fafc;
+        }
         
-        /* छोटा Top Bar */
-        header { background: white; padding: 5px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        /* Slide Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding-top: 50px; 
+            background: var(--light-bg); 
+            color: #444;
+        }
+        
+        header { background: white; padding: 5px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 1px 10px rgba(0,0,0,0.05); }
         nav { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: auto; padding: 0 15px; }
-        
-        .logo-img { height: 40px; width: auto; }
-        .brand { font-weight: bold; color: var(--blue); font-size: 1rem; }
+        .logo-img { height: 45px; width: auto; }
 
-        .hero { height: 50vh; background: var(--blue); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-        .hero h1 { font-size: 2.2rem; margin: 0; }
-        .hero p { color: var(--orange); font-size: 1.1rem; font-weight: bold; margin-top: 5px; }
+        .hero { 
+            padding: 60px 20px; 
+            background: white; 
+            text-align: center; 
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero h1 { font-size: 2.5rem; color: var(--blue); margin: 0; }
+        .hero p { color: var(--orange); font-size: 1.2rem; font-weight: 600; }
 
-        .services { padding: 30px 15px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1000px; margin: auto; }
-        .card { background: white; padding: 20px; border-radius: 10px; border-bottom: 3px solid var(--orange); text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .card i { color: var(--blue); font-size: 1.8rem; margin-bottom: 10px; }
+        .container { max-width: 1100px; margin: auto; padding: 20px; animation: fadeInUp 1.2s ease-out; }
+        .section-title { text-align: center; color: var(--blue); margin: 40px 0 20px; font-size: 1.8rem; }
         
-        /* WhatsApp Button */
-        .wa-btn { background: #25d366; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
-        footer { background: var(--blue); color: white; text-align: center; padding: 15px; font-size: 0.8rem; margin-top: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+            border: 1px solid #edf2f7;
+            transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-color: var(--orange); }
+        .card h3 { color: var(--blue); border-bottom: 2px solid var(--light-bg); padding-bottom: 10px; }
+        
+        .price-row { display: flex; justify-content: space-between; margin: 10px 0; font-size: 1rem; }
+        .price-tag { font-weight: bold; color: var(--orange); }
+        
+        .wa-btn { 
+            background: #25d366; color: white; padding: 12px 30px; 
+            border-radius: 50px; text-decoration: none; font-weight: bold; 
+            display: inline-block; margin-top: 30px; transition: 0.3s;
+        }
+        .wa-btn:hover { background: #128c7e; transform: scale(1.05); }
+
+        footer { background: white; text-align: center; padding: 30px; margin-top: 50px; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
+
     <header>
         <nav>
             <img src="logo.png" alt="Logo" class="logo-img">
-            <div class="brand">DM SERVICES</div>
+            <div style="font-weight: bold; color: var(--blue);">DEEPAK MEGHWAL</div>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Deepak Meghwal</h1>
-        <p>Excel • Typing • Graphics</p>
-        <a href="https://wa.me/9190127878" class="wa-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        <h1>Creative Design & Data Solutions</h1>
+        <p>प्रोफेशनल काम, सही दाम</p>
+        <div style="margin-top: 20px;">
+            <a href="https://wa.me/9190127878" class="wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp Order</a>
+        </div>
     </section>
 
-    <section class="services">
-        <div class="card"><i class="fas fa-keyboard"></i><h3>Typing</h3></div>
-        <div class="card"><i class="fas fa-file-excel"></i><h3>MS Office</h3></div>
-        <div class="card"><i class="fas fa-paint-brush"></i><h3>Design</h3></div>
-    </section>
+    <div class="container">
+        <h2 class="section-title">Graphics & Logo Design</h2>
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fas fa-pen-nib"></i> Logo Packages</h3>
+                <div class="price-row"><span>Basic Logo</span> <span class="price-tag">₹100</span></div>
+                <div class="price-row"><span>Standard Logo</span> <span class="price-tag">₹169</span></div>
+                <div class="price-row"><span>Pro Logo</span> <span class="price-tag">₹237</span></div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-image"></i> YouTube Thumbnails</h3>
+                <div class="price-row"><span>Basic</span> <span class="price-tag">₹156</span></div>
+                <div class="price-row"><span>Standard</span> <span class="price-tag">₹218</span></div>
+                <div class="price-row"><span>Pro</span> <span class="price-tag">₹245</span></div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Data & Office Work</h2>
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fas fa-keyboard"></i> Typing & Word</h3>
+                <div class="price-row"><span>Typing (Per Page)</span> <span class="price-tag">₹15</span></div>
+                <div class="price-row"><span>Resume Design</span> <span class="price-tag">₹50</span></div>
+                <div class="price-row"><span>MS Word Doc</span> <span class="price-tag">₹50</span></div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-file-excel"></i> Excel Services</h3>
+                <div class="price-row"><span>Data Cleaning (1000 Rows)</span> <span class="price-tag">₹349</span></div>
+                <div class="price-row"><span>Data Entry</span> <span class="price-tag">On Discuss</span></div>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Deepak Meghwal | Professional Services</p>
+        <p><strong>दीपक मेघवाल</strong> - डिजिटल फ्रीलांसर</p>
+        <p style="font-size: 0.9rem; color: #888;">Email: deepakmeghwal90127878@gmail.com</p>
+        <div style="margin-top: 15px;">
+            <a href="https://www.instagram.com/deepakjajawara?igsh=MW10OHhveWducW9wYg==" target="_blank" style="color: #555; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
+
 </body>
 </html>
